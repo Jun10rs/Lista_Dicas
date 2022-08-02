@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEVinKnowledge</title>
+    <link rel="shortcut icon" href="imagens/open.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" type="module"></script>
     
@@ -12,19 +13,19 @@
 </head>
 <body>
     <header>
-        <h1>DEVinKnowledge</h1><br>
+        <h1> <img src="imagens/newspaper.svg" alt="img">DEVinKnowledge</h1>
     </header>
 
     <main>
-        <section class="esquerda">
+        <section class="coluna-esquerda">
             <div class="form">
 
                 <form action="">
                     <label for="ftitle">Titulo*</label><br>
-                    <input type="text" name="ftitle" id="ftitle" min="8" max="64" required><br>
+                    <input type="text" name="ftitle" id="ftitle" min="8" max="64" required placeholder="  Digite um titulo..." ><br>
 
                     <label for="flinguagem">Linguagem e Skills*</label><br>
-                    <input type="text" name="flinguagem" id="flinguagem" min="8" max="32" required><br>
+                    <input type="text" name="flinguagem" id="flinguagem" min="8" max="32" required placeholder="  Digite uma linguagem..."><br>
 
                     <label for="fcategoria">Categoria*</label><br>
                     <select name="" id="selcategoria" required>
@@ -35,19 +36,20 @@
                     </select> <br>
 
                     <label for="fdescrisao">Descrisão*</label><br>
-                    <textarea name="fdescrisao" id="fdescrisao" cols="30" rows="10"max="1024" required></textarea><br>
+                    <textarea name="fdescrisao" id="fdescrisao" cols="47" rows="15"max="1024" required placeholder="  Escreva aqui sua dica..."></textarea><br>
 
-                    <label for="fyoutube">Video do YouTube*</label><br>
-                    <input type="url" name="fyoutube" id="fyoutube "> <br>
+                    <label for="fyoutube">Video do YouTube</label><br>
+                    <input type="url" name="fyoutube" id="fyoutube " placeholder="  cole seu link do youtube aqui..."> <br>
 
-                    <button id="btn-salvar">Salvar</button> <button id="btn-limpar">Limpar</button>
+                    <button id="btn-salvar">Salvar</button> 
+                    <button id="btn-limpar">Limpar</button>
                 </form>
             </div>
         </section>
 
-        <section class="direita">
+        <section class="coluna-direita">
 
-            <div class="cards-direita">
+            <div class="container-cards">
 
                 <div class="card total">
                     <h3>Total</h3>
@@ -57,12 +59,12 @@
                 <div class="card front">
                     <h3>FrontEnd</h3>
                     <p id="front-valor">11</p>
-                </div> <br>
+                </div>
 
                 <div class="card back">
                     <h3>BackEnd</h3>
                     <p id="back-valor">15</p>
-                </div> <br>
+                </div>
 
                 <div class="card full">
                     <h3>FullStack</h3>
@@ -74,12 +76,58 @@
                     <p id="soft-valor">5</p>
                 </div> <br>
             </div>
-        </section>
-        <div class="busca"><br>
-            <input type="text" id="txtbusca" placeholder="Digite um titulo para buscar..." >
-            <button><img src="/Projeto-modulo1/imagens/close-outline.svg" alt="x"></button>
-            <button><img src="/Projeto-modulo1/imagens/trash-outline.svg" alt=""></button>
-        </div>
+
+            <div class="busca">
+                <input type="text" id="txtbusca" placeholder="  Digite um titulo para buscar..." >
+                <button>Busca</button>
+                <button>Fechar</button>
+            </div>
+            <br>
+
+            <nav class="lista">
+                <ul>
+                    <li>
+                        <h1>Titulo</h1>
+                        <h3>Linguagem</h3><br>
+                        <h3>Categoria</h3><br>
+                        <p>As listas ordenadas (<ol> - ordered list) também podem ter sua estrutura composta 
+                            por outras listas ordenadas como no exemplo que temos para as listas não-ordenadas. 
+                            Também é possível ter listas ordenadas aninhadas em um item de uma lista não-ordenada 
+                            e vice-versa.</p><br>
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/apagar.svg" alt=""></button>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h1>FrontEnd</h1>
+                        <h3>Linguagem</h3><br>
+                        <h3>Categoria</h3><br>
+                        <p>As listas ordenadas (<ol> - ordered list) também podem ter sua estrutura composta 
+                            por outras listas ordenadas como no exemplo que temos para as listas não-ordenadas. 
+                            Também é possível ter listas ordenadas aninhadas em um item de uma lista não-ordenada 
+                            e vice-versa.</p><br>
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/apagar.svg" alt=""></button>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h1>FrontEnd</h1>
+                        <h3>Linguagem</h3><br>
+                        <h3>Categoria</h3><br>
+                        <p>As listas ordenadas (<ol> - ordered list) também podem ter sua estrutura composta 
+                            por outras listas ordenadas como no exemplo que temos para as listas não-ordenadas. 
+                            Também é possível ter listas ordenadas aninhadas em um item de uma lista não-ordenada 
+                            e vice-versa.</p><br>
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/apagar.svg" alt=""></button>
+                    </li>
+                </ul>
+            </nav>
+        </section>  
 
     </main>
 

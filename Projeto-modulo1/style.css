@@ -1,4 +1,5 @@
 * {
+    font-family:Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 
@@ -6,70 +7,147 @@
 body {
     background-color: aqua;
 }
-/* #busca{
-    background-color:#2F4F4F;
-    border:solid 1px;
-    border-radius:15px;
-    width:300px;
-  } */
- 
-/*   
-  #txtbusca img{
-    float:left;
-    background-color:transparent;
-    padding-left:5px;
-    font-style:italic;
-    font-size:18px;
-    border:none;
-    height:30px;
-    width:300px;
-  }  */
 
-/* input {
-    box-sizing: border-box;
-    position: absolute;
-    width: 512px;
-    height: 54px;
-    left: 0px;
-    top: 39px;
-
-    background: #FFFFFF;
-    border: 4px solid #D9D9D9;
-    border-radius: 16px;
-} */
-img {
-    
-    height: 20px;   
+header {
+    background-color: brown;
+    width: 404px;
+}
+h1 {
+    font-size: 30px;
+    color: rgb(5, 5, 68);
+    margin-left: 30px;
+}
+h1 img {
+    height: 40px;
 }
 
-.esquerda {
+.form {
+    background-color: brown;
     display: flex;
+    flex-direction: column;
     float: left;
+    width: auto;
+    margin-top: 0px;
 }
-.direita {
+
+label {
+    margin-left: 30px;
+    font-size: 20px;
+}
+form input {
+    margin: 10px 25px 20px;
+    height: 30px;
+    width: 350px;
+    border-radius: 15px;
+}
+
+select {
+    margin: 10px 25px 20px;
+    height: 35px;
+    width: 350px;
+    border-radius: 15px;
+}
+textarea {
+    margin: 10px 25px 20px;
+    border-radius: 15px;
+}
+
+form button {
+    margin: 20px 45px 30px 50px;
+    font-size: large;
+    height: 40px;
+    width: 100px;
+}
+
+
+.coluna-direita {
     display: flex;
-    float: right;
-    flex-direction: column ;
+    flex-direction: column; 
+    /* border: 5px solid rgb(255, 2, 2); */
+    height: 720px;
+    width: 660px;   
  }
 
-.cards-direita {
+.container-cards{
     display: flex;
-    float: right;
-    justify-content: center;
-    /* align-items: center; */
+    flex-direction: row;
+    justify-content:space-around;
+    gap: 25px;
     text-align: center;
-    gap: 15px;
-    
-    
+    height: 100px;
+    /* border: 5px solid black; */
+    margin-left: 20px;
+    margin-top: -25px;
 }
+
+
 .card {
     box-shadow: 8px 8px 20px 0px rgba(8, 8, 8, 0.425);
     border-radius: 5px;
     background-color: white;
-    /* padding: 10px;
-    margin: 10px; */
-    width: 90px;
-    height: 50px;    
+    width: 100px;
+    height: 60px; 
 }
 
+.busca input{
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.busca button {
+    width: 50px;
+    height: 30px;
+    
+}
+img {
+    height: 20px;   
+}
+nav {
+    /* border: 5px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    overflow: auto;
+    -webkit-overflow-scrolling: blue;
+}
+nav::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+nav::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+nav::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+nav::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+li {
+    margin: 10px;
+    display: block;
+    margin-left: 10px;
+    box-shadow: 8px 8px 20px 0px rgba(8, 8, 8, 0.425);
+    border-radius: 5px;
+    background-color: white;
+    list-style: none;
+    width: 600px;
+    height: auto;
+}
+li h1{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
 
