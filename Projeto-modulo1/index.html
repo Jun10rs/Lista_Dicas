@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVinKnowledge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" type="module"></script>
+    
+  
+</head>
+<body>
+    <header>
+        <h1>DEVinKnowledge</h1><br>
+    </header>
+
+    <main>
+        <section class="esquerda">
+            <div class="form">
+
+                <form action="">
+                    <label for="ftitle">Titulo*</label><br>
+                    <input type="text" name="ftitle" id="ftitle" min="8" max="64" required><br>
+
+                    <label for="flinguagem">Linguagem e Skills*</label><br>
+                    <input type="text" name="flinguagem" id="flinguagem" min="8" max="32" required><br>
+
+                    <label for="fcategoria">Categoria*</label><br>
+                    <select name="" id="selcategoria" required>
+                        <option value="FrontEnd">FrontEnd</option>
+                        <option value="BackEnd">BackEnd</option>
+                        <option value="FullStack">FullStack</option>
+                        <option value="Comportamental/Soft">Comportamental/Soft</option>
+                    </select> <br>
+
+                    <label for="fdescrisao">Descrisão*</label><br>
+                    <textarea name="fdescrisao" id="fdescrisao" cols="30" rows="10"max="1024" required></textarea><br>
+
+                    <label for="fyoutube">Video do YouTube*</label><br>
+                    <input type="url" name="fyoutube" id="fyoutube "> <br>
+
+                    <button id="btn-salvar">Salvar</button> <button id="btn-limpar">Limpar</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="direita">
+
+            <div class="cards-direita">
+
+                <div class="card total">
+                    <h3>Total</h3>
+                    <p id="total-valor">43</p>
+                </div>
+
+                <div class="card front">
+                    <h3>FrontEnd</h3>
+                    <p id="front-valor">11</p>
+                </div> <br>
+
+                <div class="card back">
+                    <h3>BackEnd</h3>
+                    <p id="back-valor">15</p>
+                </div> <br>
+
+                <div class="card full">
+                    <h3>FullStack</h3>
+                    <p id="full-valor">12</p>
+                </div>
+
+                <div class="card soft">
+                    <h3>Soft Skills</h3>
+                    <p id="soft-valor">5</p>
+                </div> <br>
+            </div>
+        </section>
+        <div class="busca"><br>
+            <input type="text" id="txtbusca" placeholder="Digite um titulo para buscar..." >
+            <button><img src="/Projeto-modulo1/imagens/close-outline.svg" alt="x"></button>
+            <button><img src="/Projeto-modulo1/imagens/trash-outline.svg" alt=""></button>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
