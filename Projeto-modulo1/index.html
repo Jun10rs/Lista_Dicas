@@ -4,130 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/open.svg" type="image/x-icon">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="js/app.js" type="module"></script>
     <title>DEVinKnowledge</title>
-    <link rel="shortcut icon" href="imagens/open.svg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" type="module"></script>
     
   
 </head>
 <body>
-    <header>
-        <h1> <img src="imagens/newspaper.svg" alt="img">DEVinKnowledge</h1>
-    </header>
-
     <main>
-        <section class="coluna-esquerda">
-            <div class="form">
+        <div id="container">
 
-                <form action="">
+            <div class="coluna-form">
+
+                <img id="img-logo" src="img/newspaper-outline.svg" alt="img"> 
+                <h1> <span>DEVinKnowledge</span> </h1>
+               
+
+                <form id="form-recipe">
                     <label for="ftitle">Titulo*</label><br>
-                    <input type="text" name="ftitle" id="ftitle" min="8" max="64" required placeholder="  Digite um titulo..." ><br>
+                    <input type="text" name="title" id="ftitle" minlength="8" maxlength="64" placeholder="  Digite um titulo..." ><br>
 
                     <label for="flinguagem">Linguagem e Skills*</label><br>
-                    <input type="text" name="flinguagem" id="flinguagem" min="8" max="32" required placeholder="  Digite uma linguagem..."><br>
+                    <input type="text" name="linguagem" id="flinguagem" minlength="8" maxlength="32" placeholder="  Digite uma linguagem..."><br>
 
                     <label for="fcategoria">Categoria*</label><br>
-                    <select name="" id="selcategoria" required>
+                    <select name="categoria" id="fcategoria">
                         <option value="FrontEnd">FrontEnd</option>
                         <option value="BackEnd">BackEnd</option>
                         <option value="FullStack">FullStack</option>
                         <option value="Comportamental/Soft">Comportamental/Soft</option>
-                    </select> <br>
+                    </select><br>
 
                     <label for="fdescrisao">Descrisão*</label><br>
-                    <textarea name="fdescrisao" id="fdescrisao" cols="47" rows="15"max="1024" required placeholder="  Escreva aqui sua dica..."></textarea><br>
+                    <textarea name="descrisao" id="fdescrisao" cols="20" rows="10" maxlength="1024" placeholder="  Escreva aqui sua dica..."></textarea><br>
 
                     <label for="fyoutube">Video do YouTube</label><br>
-                    <input type="url" name="fyoutube" id="fyoutube " placeholder="  cole seu link do youtube aqui..."> <br>
+                    <input type="url" name="youtube" id="fyoutube " placeholder="  cole seu link do youtube aqui..."> <br>
 
-                    <button id="btn-salvar">Salvar</button> 
-                    <button id="btn-limpar">Limpar</button>
+                    <button type="submit" id="btn-salvar">Salvar</button> 
+                    <button type="reset" id="btn-limpar">Limpar</button>
                 </form>
-            </div>
-        </section>
-
-        <section class="coluna-direita">
-
-            <div class="container-cards">
-
-                <div class="card total">
-                    <h3>Total</h3>
-                    <p id="total-valor">43</p>
-                </div>
-
-                <div class="card front">
-                    <h3>FrontEnd</h3>
-                    <p id="front-valor">11</p>
-                </div>
-
-                <div class="card back">
-                    <h3>BackEnd</h3>
-                    <p id="back-valor">15</p>
-                </div>
-
-                <div class="card full">
-                    <h3>FullStack</h3>
-                    <p id="full-valor">12</p>
-                </div>
-
-                <div class="card soft">
-                    <h3>Soft Skills</h3>
-                    <p id="soft-valor">5</p>
-                </div> <br>
+                <br>
             </div>
 
-            <div class="busca">
-                <input type="text" id="txtbusca" placeholder="  Digite um titulo para buscar..." >
-                <button>Busca</button>
-                <button>Fechar</button>
+            <div class="coluna-cards">
+
+                <div id="div-card">
+                    <div>
+                        <h3>Total</h3>
+                        <p id="total-valor">43</p>
+                    </div>
+
+                    <div>
+                        <h3>FrontEnd</h3>
+                        <p id="front-valor">11</p>
+                    </div>
+
+                    <div>
+                        <h3>BackEnd</h3>
+                        <p id="back-valor">15</p>
+                    </div>
+
+                    <div>
+                        <h3>FullStack</h3>
+                        <p id="full-valor">12</p>   
+                    </div>
+                    <div>
+                        <h3>Soft Skills</h3>
+                        <p id="soft-valor">5</p>
+                    </div>
+                </div> 
+        
+                <div class="busca">
+                    <input type="text" id="txtbusca" placeholder="  Digite um titulo para buscar..." >
+                    <button>Busca</button>
+                    <button>Fechar</button>
+                </div>
+                
+                <div class="lista">
+                    <ul id="lista-dicas">
+                        <li>
+                            <h1>Titulo</h1>
+                            <h3>Linguagem</h3><br>
+                            <h3>Categoria</h3><br>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <br>
-
-            <nav class="lista">
-                <ul>
-                    <li>
-                        <h1>Titulo</h1>
-                        <h3>Linguagem</h3><br>
-                        <h3>Categoria</h3><br>
-                        <p>As listas ordenadas (<ol> - ordered list) também podem ter sua estrutura composta 
-                            por outras listas ordenadas como no exemplo que temos para as listas não-ordenadas. 
-                            Também é possível ter listas ordenadas aninhadas em um item de uma lista não-ordenada 
-                            e vice-versa.</p><br>
-                            <button><img src="imagens/editar.svg" alt=""></button>
-                            <button><img src="imagens/apagar.svg" alt=""></button>
-                    </li>
-                </ul>
-
-                <ul>
-                    <li>
-                        <h1>FrontEnd</h1>
-                        <h3>Linguagem</h3><br>
-                        <h3>Categoria</h3><br>
-                        <p>As listas ordenadas (<ol> - ordered list) também podem ter sua estrutura composta 
-                            por outras listas ordenadas como no exemplo que temos para as listas não-ordenadas. 
-                            Também é possível ter listas ordenadas aninhadas em um item de uma lista não-ordenada 
-                            e vice-versa.</p><br>
-                            <button><img src="imagens/editar.svg" alt=""></button>
-                            <button><img src="imagens/apagar.svg" alt=""></button>
-                    </li>
-                </ul>
-
-                <ul>
-                    <li>
-                        <h1>FrontEnd</h1>
-                        <h3>Linguagem</h3><br>
-                        <h3>Categoria</h3><br>
-                        <p>As listas ordenadas (<ol> - ordered list) também podem ter sua estrutura composta 
-                            por outras listas ordenadas como no exemplo que temos para as listas não-ordenadas. 
-                            Também é possível ter listas ordenadas aninhadas em um item de uma lista não-ordenada 
-                            e vice-versa.</p><br>
-                            <button><img src="imagens/editar.svg" alt=""></button>
-                            <button><img src="imagens/apagar.svg" alt=""></button>
-                    </li>
-                </ul>
-            </nav>
-        </section>  
+        </div> 
 
     </main>
 
