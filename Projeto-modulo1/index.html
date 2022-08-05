@@ -12,91 +12,101 @@
   
 </head>
 <body>
-    <main>
         <div id="container">
 
-            <div class="coluna-form">
+            <div id="coluna-esquerda">
 
-                <img id="img-logo" src="img/newspaper-outline.svg" alt="img"> 
-                <h1> <span>DEVinKnowledge</span> </h1>
+                
+                <h1>
+                    <img id="img-logo" src="img/newspaper-outline.svg" alt="img"> 
+                    DEVin<br><span>Knowledge</span></h1>
                
 
-                <form id="form-recipe">
-                    <label for="ftitle">Titulo*</label><br>
-                    <input type="text" name="title" id="ftitle" minlength="8" maxlength="64" placeholder="  Digite um titulo..." ><br>
+                <form id="formulario">
 
-                    <label for="flinguagem">Linguagem e Skills*</label><br>
-                    <input type="text" name="linguagem" id="flinguagem" minlength="8" maxlength="32" placeholder="  Digite uma linguagem..."><br>
+                    <label for="ftitle">Titulo*</label>
+                    <input type="text" name="title" id="ftitle" minlength="8" maxlength="64" 
+                        placeholder="  Digite um titulo..." >
 
-                    <label for="fcategoria">Categoria*</label><br>
+                    <label for="flinguagem">Linguagem e Skills*</label>
+                    <input type="text" name="linguagem" id="flinguagem" minlength="8" maxlength="32" 
+                        placeholder="  Digite uma linguagem...">
+
+                    <label for="fcategoria">Categoria*</label>
                     <select name="categoria" id="fcategoria">
                         <option value="FrontEnd">FrontEnd</option>
                         <option value="BackEnd">BackEnd</option>
                         <option value="FullStack">FullStack</option>
                         <option value="Comportamental/Soft">Comportamental/Soft</option>
-                    </select><br>
+                    </select> 
 
-                    <label for="fdescrisao">Descrisão*</label><br>
-                    <textarea name="descrisao" id="fdescrisao" cols="20" rows="10" maxlength="1024" placeholder="  Escreva aqui sua dica..."></textarea><br>
+                    <label for="fdescrisao">Descrisão*</label>
+                    <textarea name="descrisao" id="fdescrisao" maxlength="1024" 
+                        placeholder="  Escreva aqui sua dica..."></textarea>
 
-                    <label for="fyoutube">Video do YouTube</label><br>
+                    <label for="fyoutube">Video do YouTube</label>
                     <input type="url" name="youtube" id="fyoutube " placeholder="  cole seu link do youtube aqui..."> <br>
-
-                    <button type="submit" id="btn-salvar">Salvar</button> 
-                    <button type="reset" id="btn-limpar">Limpar</button>
+                    
+                    <div id="botao-form">
+                        <button type="submit" id="btn-salvar">Salvar</button> 
+                        <button type="reset" id="btn-limpar">Limpar</button>  
+                    </div>
+                    
                 </form>
-                <br>
             </div>
 
-            <div class="coluna-cards">
+            <div id="coluna-direita">
 
                 <div id="div-card">
-                    <div>
+                    <div id="card-total">
                         <h3>Total</h3>
                         <p id="total-valor">43</p>
                     </div>
 
-                    <div>
+                    <div id="card-front">
                         <h3>FrontEnd</h3>
                         <p id="front-valor">11</p>
                     </div>
 
-                    <div>
+                    <div id="card-back">
                         <h3>BackEnd</h3>
                         <p id="back-valor">15</p>
                     </div>
 
-                    <div>
+                    <div id="card-full">
                         <h3>FullStack</h3>
                         <p id="full-valor">12</p>   
                     </div>
-                    <div>
+
+                    <div id="card-soft">
                         <h3>Soft Skills</h3>
                         <p id="soft-valor">5</p>
                     </div>
                 </div> 
         
                 <div class="busca">
-                    <input type="text" id="txtbusca" placeholder="  Digite um titulo para buscar..." >
-                    <button>Busca</button>
-                    <button>Fechar</button>
+                    <input type="text" id="txtbusca" placeholder="Digite um titulo para buscar..." >
+                    <button><img src="img/busca.svg" alt=""></button>
+                    <button><img src="img/fechar.svg" alt=""></button>
                 </div>
                 
                 <div class="lista">
                     <ul id="lista-dicas">
                         <li>
                             <h1>Titulo</h1>
-                            <h3>Linguagem</h3><br>
-                            <h3>Categoria</h3><br>
-                            <p></p>
+                            <h3>Linguagem:</h3>
+                            <h3>Categoria: </h3>
+                            <p>Cascading Style Sheets é um mecanismo para adicionar estilo a um 
+                                documento web. O código CSS pode ser aplicado diretamente nas 
+                                tags ou ficar contido dentro das tags style. Também é possível, 
+                                em vez de colocar a formatação dentro do documento, criar um link
+                                para um arquivo CSS que contém os estilos.</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div> 
-
-    </main>
-
+        
     <footer>
 
     </footer>

@@ -1,181 +1,193 @@
 * {
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-
+    font-family:sans-serif;
 }
+ul {
+    list-style: none;
+}
+
 body {
-    background-color: rgb(166, 173, 209);
+    margin: 0px;
+    padding: 0px;
+    background-color:chartreuse;
 }
 
+h1 {
+    text-align: center;
+}
+
+span{
+    justify-content: right;
+    justify-items: left ;
+}
 
 #img-logo {
-    height: 40px;
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
-}
-.coluna-form {
-    min-width: 200px;
-    max-width: 300px;
+    margin-left: -175px;
+    height: 35px;
 }
 
-/* .coluna-cards {
-    display: flex; 
-    flex-grow: 1;
-    
+/*COLUNA ESQUERDA*/
+
+#container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+#coluna-esquerda {
+    background-color: rgb(100, 148, 237);
+    min-width: 500px;
+}
+
+#formulario {
+    margin: 20px 10px 20px 10px;
+    display: flex;
     flex-direction: column;
-    border: 3px solid black;
-    min-height: 300px;
-}*/
-#div-card {
-    border: 5px solid rgb(173, 9, 9);
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    min-width: 200px;
-    max-width: 600px;
 }
 
-label {
-    margin-bottom: 4px;
+label, textarea, input, select {
+    margin-bottom: 13px;
+    border-radius: 7px;
+    font-size: 16px;
 } 
-/* #container {
-    display: flex;
-    flex-wrap: wrap;
-
-} */
-
-/* .coluna-form {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-} */
-/* .coluna-cards {
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
-} */
-/* 
-header {
-    text-align: center;
-    height: 80px;
-    background-color: brown;
-    width: 579px;
-}
-span {
-    font-size: 30px;
-    color: rgb(5, 5, 68);    
-}*/
-
-/*
-.form {
-    background-color: brown;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    float: left;
-    height: auto;
-    width: auto;
-}
 
 label {
-    margin-left: 35px;
-    font-size: 20px;
+    font-weight: bold;
 }
-form input {
-    margin: 10px 35px 20px;
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input {
     height: 30px;
-    width: 500px;
-    border-radius: 15px;
 }
 
 select {
-    margin: 10px 35px 20px;
-    height: 35px;
-    width: 500px;
-    border-radius: 15px;
-}
-textarea {
-    margin: 10px 35px 20px;
-    border-radius: 15px;
-    resize: none;
+    margin-bottom: 10px;
+    height: 30px;
 }
 
-form button {
-    margin: 20px 45px 30px 80px;
+#botao-form {
+    display: flex;    
+    gap: 30px;
+}
+
+#botao-form button {
+    flex-grow: 1;
+    border-radius: 20px;
+    height: 30px;
     font-size: large;
-    height: 40px;
-    width: 100px;
+    font-weight: bold;
+    box-shadow: 8px 8px 20px 0px rgba(8, 8, 8, 0.425);
 }
 
+#btn-salvar {
+    background-color: rgb(25, 223, 25);
+}
 
-.coluna-direita {
-    display: flex;
-    flex-direction: column; 
-    border: 5px solid rgb(255, 2, 2);
-    height: 660px;
-    width: 700px;   
- } */
+#btn-limpar {
+    background-color: yellow;
+}
 
-/* .container-cards{
+#botao-form :hover {
+    background-color: blue;
+    color: white;
+}
+
+/*COLUNA DIREITA*/
+
+#coluna-direita {
+    background-color: chartreuse;
+    min-width: 200px;
+    max-width: 650px;
+    flex-direction: row;
+}
+
+#div-card { 
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
-    gap: 25px;
-    text-align: center;
-    height: 100px;
-
-    margin-left: 60px;
-    margin-top: -25px;
-} */
-
-/* .card {
+    gap: 15px;
+    margin: 20px 15px 20px;
+    height: 80px;
+}
+#card-total, #card-soft, #card-front, #card-back, #card-full {
     box-shadow: 8px 8px 20px 0px rgba(8, 8, 8, 0.425);
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: white;
+    text-align: center;
     width: 100px;
-    height: 60px; 
 }
 
-.busca input{
+.busca {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#txtbusca {
     width: 400px;
-    height: 30px;
-    border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
 }
 
 .busca button {
-    width: 50px;
-    height: 30px;
-    
+    margin-top: 10px;
+    height: 35px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: white;
 }
-img {
-    height: 20px;   
-} */
 
-/* .lista::-webkit-scrollbar {
-    width: 5px;
-} */
+.lista {
+    display: flex;
+    flex-direction: column;
+    height: 490px;
+    width: 650px;
+    /* border: 2px solid red; */
+    margin-left: -30px;
+    overflow-y: scroll;
+}
+li {
+    /* border: 2px solid red; */
+    background-color: antiquewhite;
+    border-radius: 10px;
+    max-width: 600px;
+    max-height: 220px;
+    margin:5px 10px 10px -15px ;
+    overflow-y:scroll;
+    padding: 10px;
+}
 
-/* Track */
-/* .lista::-webkit-scrollbar-track {
-    background: gainsboro;
+li::-webkit-scrollbar {
+    width: 8px;
+} 
+
+li::-webkit-scrollbar-thumb {   
+    background: rgb(100, 148, 237);
     border-radius: 5px;
-} */
+}
+li::-webkit-scrollbar-thumb:hover {
+    background: rgb(43, 42, 42);
+}
 
-/* Handle */
-/* .lista::-webkit-scrollbar-thumb {
-    background: black;
+.lista::-webkit-scrollbar {
+    width: 8px;
+} 
+.lista::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 8px;
+}
+.lista::-webkit-scrollbar-thumb {
+    background: rgb(100, 148, 237);
     border-radius: 5px;
-} */
-
-/* Handle on hover */
-/* .lista::-webkit-scrollbar-thumb:hover {
-    background: #555;
-} */
+}
+.lista::-webkit-scrollbar-thumb:hover {
+    background: rgb(43, 42, 42);
+}
 
 /* li {
     margin: 10px;

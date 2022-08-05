@@ -20,108 +20,62 @@ const btnLimpar = document.querySelector ('#btn-limpar')
 //campo busca
 const buscar = document.querySelector ('#txtbusca')
 
-const form = document.getElementById ('form-recipe')
+const form = document.getElementById ('formulario')
 
 form.addEventListener ('submit', (event) => {
     event.preventDefault()
+
+    console.log('Salvou')
 })
 
 
-// let dicas = []
-
-// const dicas = {
-//     titulo: fTitulo.value, 
-//     linguagem: fLinguagem.value, 
-//     // categoria: 'categoria', 
-//     // skills: 'skills', 
-//     // descrisao:'descrisao'
-// }
 
 
-// function adicionaDicas (){
-//     const tituloDica = fTitulo.value
-//     // const skillDica = fLinguagem.value
-//     // const categDica = fSelect.value
-//     // const descrDica = fDescrisao.value
-//     if ( tituloDica === '') {
-//         alert ('informe todos os campos')
-//     } else {
-//         dicas.push (fTitulo)
-//         console.log(dicas)
-//         // adicionadicas ()
-//         // atualizaLista ()
-       
-//     }
-// }
-
-
-// function atualizaLista() {
-//     ulDica.innerHTML = ''
-  
-//     dicas.forEach((titulo) => {
-//       const li = document.createElement('li')
-
-//       const hTitulo = document.createElement ('h1')
-//       hTitulo.innerHTML = titulo    
-//       li.appendChild (hTitulo)
-//       console.log (dicas)
-
-    //   const tLinguagem = document.createElement ('h3')
-    //   tLinguagem.innerHTML = skills
-    //   li.appendChild (tLinguagem)
-    //   console.log (tLinguagem)
-    //   const tCateg = document.createElement ('h3')
-    //   tCateg.innerHTML = categoria
-    //   li.appendChild (categoria)
-    //   const ptxt = document.createElement (p)
-    //   ptxt.innerHTML = descrisao
-    //   li.appendChild (ptxt)
-
-    //   ulDica.appendChild(li)
-//     //   adicionadicas()    
-//     })
-// }
-
-
-
-
-
-const cDicas = [
+const listaDicas = [
     {
+    titulo: fTitulo.value,
+    skill: 'skills',
+    categoria: 'categoria',
+    descrisao: 'descrisao',
+    },
+
+    { 
     titulo: 'titulo',
     skill: 'skills',
     categoria: 'categoria',
     descrisao: 'descrisao',
-}]
+    },
+]
 
-function criarElemento (item){
 
+function criarElemento (item) {
     const li = document.createElement('li')
+    
+    const dTitulo = document.createElement ('h1')
+    dTitulo.innerText = item.titulo
+    li.appendChild (dTitulo)
 
-    const titulo = document.createElement ('h1')
-    titulo.innerText = item.titulo
-    li.appendChild (titulo)
+    const dSkills = document.createElement ('h3')
+    dSkills.innerText = item.skill
+    li.appendChild (dSkills)
 
-    const skills = document.createElement ('h3')
-    skills.innerText = item.skill
-    li.appendChild (skills)
+    const dCategoria = document.createElement ('h3')
+    dCategoria.innerText = item.categoria
+    li.appendChild (dCategoria)
 
-    const categoria = document.createElement ('h3')
-    categoria.innerText = item.categoria
-    li.appendChild (categoria)
+    const dDescrisao = document.createElement ('p')
+    dDescrisao.innerText = item.descrisao
+    li.appendChild (dDescrisao)
 
-    const descrisao = document.createElement ('p')
-    descrisao.innerText = item.descrisao
-    li.appendChild (descrisao)
-
-    ulDica.appendChild (li)
     return li
 }
+const li = criarElemento (listaDicas[0])
+const li2 = criarElemento (listaDicas[0])
+ulDica.appendChild (li)
+ulDica.appendChild (li2)
 
 btnSalvar.addEventListener('click', criarElemento)
 
-
-// const item = createItemElement ( )
 
 
 
