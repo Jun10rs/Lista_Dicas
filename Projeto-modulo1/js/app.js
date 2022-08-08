@@ -3,7 +3,7 @@ const fTitulo = document.querySelector ('#ftitle')
 const fLinguagem = document.querySelector ('#flinguagem')
 const fCategoria = document.querySelector ('#fcategoria')
 const fDescrisao = document.querySelector ('#fdescrisao')
-const fYoutube = document.querySelector ('#fyoutube')
+const fLink = document.getElementById('f-link')
 const ulDica = document.querySelector ('#lista-dicas')
 
 //botão
@@ -26,7 +26,7 @@ const form = document.getElementById ('formulario')
 
 let listaItem = []
 
-let edicao = false
+let edicao = null
 
 //FUNÇÃO PARA REMOVER AS DICAS
 function removeCard (itemRemovido) {
@@ -43,26 +43,52 @@ function criarDicas (){
         skill: fLinguagem.value,
         categoria: fCategoria.value,
         descrisao: fDescrisao.value,
+        link: fLink.value,
+        
     }
-    alert ('Dica cadastrada com sucesso!!!')
+    console.log(fLink.value)
+
+    if(!novoItem === !edicao) {
+        alert ('Dica editada com sucesso')
+    }else {
+        alert ('Dica cadastrada com sucesso!!!')
+    }
+
+    if (!edicao) {
+        listaItem.push(novoItem)
+    }else {
+
+        edicao.titulo = novoItem.titulo, 
+        edicao.skill = novoItem.skill,
+        edicao.categoria = novoItem.categoria,
+        edicao.descrisao = novoItem.descrisao,
+
+        edicao = null
+
+        fTitulo.value = ''
+        fLinguagem.value = ''
+        fDescrisao.value = ''
+    }
     
-    listaItem.push(novoItem)
+
     attLista()
     salvarJson()
+    fTitulo.value = ''
+    fLinguagem.value = ''
+    fDescrisao.value = ''
 }
 
-//FUNÇÃO PARA EDITAR AS DICAS
+
+// FUNÇÃO PARA EDITAR AS DICAS
 function editarCard (itemEdicao){
     const { titulo, skill, categoria, descrisao} = itemEdicao
-    fTitulo.value = titulo
-    fLinguagem.value = skill
-    fCategoria.value = categoria
-    fDescrisao.value = descrisao
-    
-    console.log (titulo)
-    
-    
-   
+        fTitulo.value = titulo
+        fLinguagem.value = skill
+        fCategoria.value = categoria
+        fDescrisao.value = descrisao
+        
+        edicao = itemEdicao
+    console.log ({edicao})
 }
 
 // BLOCO DE FUNÇÃO PARA CRIAR OS ELEMENTOS DAS DICAS
@@ -105,11 +131,21 @@ function criarElemento (item) {
     const btnEdit = document.createElement ('button')
     btnEdit.innerText = '📝' 
 
-    btnEdit.addEventListener ('click', editarCard)
-    console.log ('edita',item)
-    // editarCard(item)
-
+    btnEdit.addEventListener ('click', () => {
+        editarCard(item)
+        console.log ('edita',item)
+    })
+   
     liList.appendChild (btnEdit)
+
+    if (fLink.value === '') {
+
+    }else {
+        const btnLink = document.createElement ('button')
+        btnLink.innerText = 'link' 
+        liList.appendChild (btnLink)
+
+    }
     
     return liList
 }
@@ -170,7 +206,9 @@ function attLista () {
     })
     contadorCard()
 }
+
 form.addEventListener ('submit', (event) => {
+    
     //evita o comportamento padrão do navegador
     event.preventDefault()
     
@@ -179,11 +217,11 @@ form.addEventListener ('submit', (event) => {
     criarDicas()
     attLista()
 })
-form.addEventListener ('reset', (event) => {
-    edicao = false
-    //evita o comportamento padrão do navegador
-    console.log ('reset')
-})
+// form.addEventListener ('reset', (event) => {
+//     edicao = false
+//     //evita o comportamento padrão do navegador
+//     console.log ('reset')
+// })
 
 btnBusca.addEventListener ('click', () => {
        // const pesquisar = buscar.value; 
@@ -211,6 +249,12 @@ function puxarJson (){
     }
     console.log ({listaJson})     
 }
+
+// btnSalvar.addEventListener ('click', ()=> {
+//     if (editarCard == true) {
+//         attLista ()
+//     }
+// })
 
 puxarJson()
 attLista()
