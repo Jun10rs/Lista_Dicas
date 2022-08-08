@@ -14,7 +14,8 @@ link para video, botão para Salvar e botão para Limpar campos.
 Quando clicar em salvar, é adicionado uma nova lista na coluna da direita, e atualizada a quantidade de 
 dicas o topo da página referente a cada categoria, e os campos são limpos automaticamente.
 
-Sobre o botão do link, não está funcionando corretamente ainda, e não sei se vou conseguir terminar a tempo.
+Sobre o botão do link, não está funcionando corretamente ainda, e não sei se vou conseguir terminar a tempo,
+porque agora são 23:02!
 
 Todos os cards são salvos em localStorage, e podem ser carregados quando atualiza a pagina, caso tenham 
 itens salvos. Se os cards forem alterados ou excluidos, tambem são salvos em localStorage.
